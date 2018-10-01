@@ -8,6 +8,7 @@
 #define LCD_D5  22               //Data pin 5
 #define LCD_D6  21               //Data pin 6
 #define LCD_D7  14               //Data pin 7
+#define LCD_CLR 0
  
 int main()
 {
@@ -16,4 +17,10 @@ int main()
     lcd = lcdInit (2, 16, 4, LCD_RS, LCD_E, LCD_D4, LCD_D5, LCD_D6, LCD_D7, 0, 0, 0, 0);
                
     lcdPuts(lcd, "Hello world");   
+    lcd = lcd_clrscr();
+    lcdPuts(lcd, "clear"); 
 }
+
+//LCD_CLR (clear console)
+// LCD_HOME (retourne au debut normalement)
+//
